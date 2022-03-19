@@ -1,4 +1,10 @@
 console.log("script2");
-var paragraph = document.createElement("button");
-paragraph.innerHTML = "test";
-document.body.appendChild(paragraph);
+
+var element = document.createElement("button");
+element.innerHTML = "test";
+document.body.appendChild(element);
+
+element.addEventListener("click", function() {
+		alert("BUTTON HAS BEEN PRESSED!");
+	}
+);
