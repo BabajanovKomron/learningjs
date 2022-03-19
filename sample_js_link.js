@@ -5,6 +5,6 @@ element.innerHTML = "test";
 document.body.appendChild(element);
 
 element.addEventListener("mouseover", function() {
-		alert("BUTTON HAS BEEN PRESSED!");
+		element.innerHTML = Math.random();
 	}
 );
