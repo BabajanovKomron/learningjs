@@ -1,9 +1,9 @@
 var input1 = document.createElement("textarea");
-input1.value = "Введите";
+input1.value = Math.random();
 document.body.appendChild(input1);
 
 var input2 = document.createElement("textarea");
-input2.value = "Введите";
+input2.value = Math.random();
 document.body.appendChild(input2);
 
 var button = document.createElement("button");
@@ -19,20 +19,25 @@ document.body.appendChild(result);
 var q = Number(Number(Number));
 console.log(typeof(q));
 
+input1.addEventListener("change", function(){
+	input1.value = Math.random();
+})
+input2.addEventListener("change", function(){
+	input2.value = Math.random();
+})
+
 button.addEventListener("click", function() {
-	if(Number(input1.value) == input1.value && Number(input2.value) == input2.value){
-		result.innerHTML = Number(input1.value) + Number(input2.value);
-	}else if(input1.value == "" && input2.value == ""){
-		result.innerHTML = "Оба пусты";
-	}else if(input1.value == "" && input2.value != ""){
-		result.innerHTML = "Только первый пуст";
-	}
-	else if(input1.value != "" && input2.value == ""){
-		result.innerHTML = "Только второй пуст";
-	}
-	else{
-		result.innerHTML = input1.value + input2.value;
-	}
+		if(input1.value == Number(input1.value) && input2.value == Number(input2.value)){
+			result.innerHTML = Number(input1.value) + Number(input2.value);
+		} else if(input1.value == "" && input2.value == ""){
+			result.innerHTML = "Оба пусты";
+		} else if(input1.value == "" && input2.value != ""){
+			result.innerHTML = "Только первый пуст";
+		} else if(input1.value != "" && input2.value == ""){
+			result.innerHTML = "Только второй пуст";
+		} else{
+			result.innerHTML = input1.value + input2.value;
+		}
 	}
 );
 
