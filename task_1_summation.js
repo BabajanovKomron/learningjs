@@ -13,11 +13,15 @@ document.body.appendChild(button);
 var result = document.createElement("div");
 result.style.minHeight = "1em";
 result.style.borderStyle = "solid";
-result.style.borderWidth = "1px";
+result.style.borderWidth = "5px";
+result.style.borderColor = "green";
 document.body.appendChild(result);
 
+var number_put1 = Number(input1.value);
+var number_put2 = Number(input2.value);
+
 button.addEventListener("click", function() {
-		result.innerHTML = input1.value + input2.value;
+		result.innerHTML = number_put1 + number_put2;
 	}
 );
 
