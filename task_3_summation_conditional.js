@@ -26,7 +26,7 @@ button.addEventListener("click", function() {
 		result.innerHTML = "Только второй пуст";
 	}
 	else{
-		result.innerHTML = Number(input1.value) + Number(input2.value);
+		result.innerHTML = input1.value + input2.value;
 	}
 	}
 );
