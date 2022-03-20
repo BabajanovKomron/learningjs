@@ -17,11 +17,8 @@ result.style.borderWidth = "5px";
 result.style.borderColor = "green";
 document.body.appendChild(result);
 
-var number_put1 = Number(input1.value);
-var number_put2 = Number(input2.value);
-
 button.addEventListener("click", function() {
-		result.innerHTML = number_put1 + number_put2;
+		result.innerHTML = Number(input1.value) + Number(input2.value);
 	}
 );
 
