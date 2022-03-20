@@ -16,8 +16,6 @@ result.style.borderStyle = "solid";
 result.style.borderWidth = "1px";
 document.body.appendChild(result);
 
-var q = Number(Number(Number));
-console.log(typeof(q));
 
 input1.addEventListener("change", function(){
 	input1.value = Math.random();
