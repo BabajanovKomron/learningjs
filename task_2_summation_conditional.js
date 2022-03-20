@@ -17,9 +17,22 @@ result.style.borderWidth = "1px";
 document.body.appendChild(result);
 
 button.addEventListener("click", function() {
-		result.innerHTML = input1.value + input2.value;
+	if(input1.value == "" && input2.value == ""){
+		result.innerHTML = "Оба пустые";
+	}else if(input1.value == "" && input2.value != ""){
+		result.innerHTML = "Только первый пуст";
+	}
+	else if(input1.value != "" && input2.value == ""){
+		result.innerHTML = "Только второй пуст";
+	}
+	else{
+		result.innerHTML = input1.value + input2.value + " (Оба полны)";
+	}
 	}
 );
 
 // TODO: make it so if both inputs are empty, then a special message is displayed in the result.
 // ЗАДАЧА: сделай так, что если оба input пустые, то специальное сообщение отображается в result.
+
+//Решение: После нажатия на кнопку я добавил условие, если оба пустые то есть равны "" то вывести слово "Оба пустые"
+//Solution: After clicking on the button, I added a condition, if both are empty, that is, equal to "" then display the word "Both are empty"
