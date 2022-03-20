@@ -1,9 +1,9 @@
 var input1 = document.createElement("textarea");
-input1.value = 1;
+input1.value = 13;
 document.body.appendChild(input1);
 
 var input2 = document.createElement("textarea");
-input2.value = 2;
+input2.value = 21;
 document.body.appendChild(input2);
 
 var button = document.createElement("button");
