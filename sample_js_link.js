@@ -5,6 +5,6 @@ element.innerHTML = "test";
 document.body.appendChild(element);
 
 element.addEventListener("mouseover", function() {
-		element.innerHTML = Math.random();
+		element.innerHTML = prompt('Hello world!!!!!!!!!!!!!!!!!!1');
 	}
 );
