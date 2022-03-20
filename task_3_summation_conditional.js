@@ -16,9 +16,14 @@ result.style.borderStyle = "solid";
 result.style.borderWidth = "1px";
 document.body.appendChild(result);
 
+var q = Number(Number(Number));
+console.log(typeof(q));
+
 button.addEventListener("click", function() {
-	if(input1.value == Number && input2.value == Number){
+	if(Number(input1.value) == input1.value && Number(input2.value) == input2.value){
 		result.innerHTML = Number(input1.value) + Number(input2.value);
+	}else if(input1.value == "" && input2.value == ""){
+		result.innerHTML = "Оба пусты";
 	}else if(input1.value == "" && input2.value != ""){
 		result.innerHTML = "Только первый пуст";
 	}
