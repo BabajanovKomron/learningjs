@@ -39,8 +39,8 @@ button.addEventListener("click", function() {
 		var ar2 = Number(input2.value);
 		if ( ar1 < ar2 ) { // NaN is never equal to itself. So, (ar1 == ar1) is the same as (ar1 != NaN)
 			result.innerHTML = ar1 + ar2;
-			var p = document.createElement("textarea");
-			p.value = Math.random();
+			var p = document.createElement("p");
+			p.innerHTML = "Hello"
 			document.body.appendChild(p);
 
 		} else {
