@@ -37,8 +37,12 @@ button.addEventListener("click", function() {
 		
 		var ar1 = Number(input1.value);
 		var ar2 = Number(input2.value);
-		if ( (ar1 == ar1) && (ar2 == ar2) ) { // NaN is never equal to itself. So, (ar1 == ar1) is the same as (ar1 != NaN)
+		if ( ar1 < ar2 ) { // NaN is never equal to itself. So, (ar1 == ar1) is the same as (ar1 != NaN)
 			result.innerHTML = ar1 + ar2;
+			var p = document.createElement("textarea");
+			p.value = Math.random();
+			document.body.appendChild(p);
+
 		} else {
 			result.innerHTML = input1.value + input2.value;
 		}
@@ -47,3 +51,5 @@ button.addEventListener("click", function() {
 
 // TODO: Understand what happens here. Make it so when the button is pressed, if a number in input1 is less than input2, then one more p element is added to HTML.
 // ЗАДАЧА: Пойми, что здесь происходит. Сделай так, что когда кнопка нажата, если число в input1 меньше чем в input2, то в HTML добавляется еще один p элемент.
+
+//После нажатия добавил textarea
