@@ -37,10 +37,10 @@ button.addEventListener("click", function() {
 		
 		var ar1 = Number(input1.value);
 		var ar2 = Number(input2.value);
-		if ( ar1 == ar1 || ar2 == ar2 ) { // NaN is never equal to itself. So, (ar1 == ar1) is the same as (ar1 != NaN)
-			result.innerHTML = input1.value + input2.value;
-		} else {
+		if ( (ar1 == ar1) && (ar2 == ar2) ) { // NaN is never equal to itself. So, (ar1 == ar1) is the same as (ar1 != NaN)
 			result.innerHTML = ar1 + ar2;
+		} else {
+			result.innerHTML = input1.value + input2.value;
 		}
 	}
 );
