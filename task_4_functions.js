@@ -34,7 +34,6 @@ var text = function(ar1,ar2){
 		text_p.innerHTML = "Hello"
 		document.body.appendChild(text_p);
 		ar1= ar1+1;
-	}
 }
 
 button.addEventListener("click", function() {
