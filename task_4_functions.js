@@ -22,12 +22,6 @@ var randomizer_function = function(element) { // we can assign function to a var
 	}
 }
 
-var text = function(){
-	var p = document.createElement("p");
-	p.innerHTML = "Hello"
-	document.body.appendChild(p);
-}
-
 input1.addEventListener("change", function() {
 	randomizer_function(input1);
 });
@@ -35,21 +29,28 @@ input2.addEventListener("change", function(){
 	randomizer_function(input2);
 });
 
+var text = function(ar1,ar2){
+ 		var text_p = document.createElement("p");
+		text_p.innerHTML = "Hello"
+		document.body.appendChild(text_p);
+		ar1= ar1+1;
+	}
+}
+
 button.addEventListener("click", function() {
 		if ( (input1.value == "") && (input2.value == "") ) {
 			result.innerHTML = "one or both operands are empty";
 			return;
 		}
-		
 		var ar1 = Number(input1.value);
 		var ar2 = Number(input2.value);
 		if ( ar1 < ar2 ) { // NaN is never equal to itself. So, (ar1 == ar1) is the same as (ar1 != NaN)
 			result.innerHTML = ar1 + ar2;
-			text();
-
+			if(ar1 < ar2) {
+				text();
+			}
 		} else {
 			result.innerHTML = input1.value + input2.value;
-			text();
 		}
 	}
 );
