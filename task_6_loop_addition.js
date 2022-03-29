@@ -46,11 +46,10 @@ var loopExponentiation = function(a, b){
 var loopAddition = function(a, b){
 	// TODO: implement addition with increments in a loop, so that this function would return the same result.
 	// ЗАДАЧА: реализуй сложение через инкременты в цикле, чтоб эта функция возвращала такой же результат. 
-	a *= -1
 	while(b--){
-		a--;
+		a++;
 	}
-	return  a * (-1);
+	return  a;
 }
 
 button.addEventListener("click", function() {
