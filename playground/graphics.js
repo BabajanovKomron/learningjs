@@ -5,7 +5,7 @@ document.body.appendChild(container_div);
 
 var canvas = document.createElement("canvas");
 var context = canvas.getContext("2d");
-	canvas.width = 100;
+	canvas.width = 800;
 	canvas.height = 100;
 	canvas.style.borderStyle = "solid";
 	canvas.style.borderWidth = "1px";
