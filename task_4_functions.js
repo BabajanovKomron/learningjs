@@ -33,7 +33,12 @@ var text = function(ar1,ar2){
  		var text_p = document.createElement("p");
 		text_p.innerHTML = "Hello"
 		document.body.appendChild(text_p);
+<<<<<<< Updated upstream
 		ar1= ar1+1;
+=======
+		
+	}
+>>>>>>> Stashed changes
 }
 
 button.addEventListener("click", function() {
@@ -47,6 +52,7 @@ button.addEventListener("click", function() {
 			result.innerHTML = ar1 + ar2;
 			if(ar1 < ar2) {
 				text();
+				ar1= ar1+1;
 			}
 		} else {
 			result.innerHTML = input1.value + input2.value;
