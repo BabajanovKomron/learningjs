@@ -1,9 +1,9 @@
 var input1 = document.createElement("textarea");
-input1.value = 1;
+input1.value = -1;
 document.body.appendChild(input1);
 
 var input2 = document.createElement("textarea");
-input2.value = 100;
+input2.value = -1;
 document.body.appendChild(input2);
 
 var button = document.createElement("button");
@@ -46,13 +46,18 @@ var loopExponentiation = function(a, b){
 var loopAddition = function(a, b){
 	// TODO: implement addition with increments in a loop, so that this function would return the same result.
 	// ЗАДАЧА: реализуй сложение через инкременты в цикле, чтоб эта функция возвращала такой же результат. 
-	b = Math.abs(b);
-	while(b > 0){
-       a++;
-       b--;
+	while(b < 0){
+       	a--;
+       	b++;
 	}
+	while(b > 0){
+       	a++;
+       	b--;
+  	}
    	return a;
 }
+
+
 
 button.addEventListener("click", function() {
 		if ( (input1.value == "") || (input2.value == "") ) {
