@@ -39,7 +39,7 @@ var loopExponentiation = function(a, b){
 		a*=a;
 		b--;
 	}
-	return p;
+	return a;
 }
 var loopAddition = function(a, b){
 	// TODO: implement addition with increments in a loop, so that this function would return the same result.
