@@ -33,12 +33,6 @@ var text = function(ar1,ar2){
  		var text_p = document.createElement("p");
 		text_p.innerHTML = "Hello"
 		document.body.appendChild(text_p);
-<<<<<<< Updated upstream
-		ar1= ar1+1;
-=======
-		
-	}
->>>>>>> Stashed changes
 }
 
 button.addEventListener("click", function() {
