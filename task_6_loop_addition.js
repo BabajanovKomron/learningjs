@@ -24,22 +24,20 @@ var createHTMLElementWithTypeAndContent = function(type, content){
 var loopMultiplication = function(a, b){
 	// TODO: implement multiplication with additions in a loop, so that this function would return the same result.
 	// ЗАДАЧА: реализуй умножение через сложения в цикле, чтоб эта функция возвращала такой же результат.
-	var q = a;
-	var i = 1;
-	while(i < b){
-		q+=a;
-		i++;
+	b = Math.abs(b);
+	while(b > 0){
+		a+=a;
+		b--;
 	}
-	return q;
+	return a;
 }
 var loopExponentiation = function(a, b){
 	// TODO: implement exponentiation with multiplications in a loop, so that this function would return the same result.
 	// ЗАДАЧА: реализуй возведение в степень через умножения в цикле, чтоб эта функция возвращала такой же результат. 
-	var p = a;
-	var l = 1;
-	while(l < b){
-		p*=a;
-		l++;
+	b = Math.abs(b);
+	while(b > 0){
+		a*=a;
+		b--;
 	}
 	return p;
 }
