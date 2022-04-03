@@ -1,101 +1,71 @@
-var input1 = document.createElement("textarea");
-input1.value = 1;
-document.body.appendChild(input1);
+// TODO: first, create an array with a number of elements > 8 in a variable array1
+// Then complete the function createAndAddInputElement() acorrding to the instructions inside
+// Next, with the help of this function, with the help of a while loop, create an HTML-element for each element of array1 (PART1).
+// After that change the values of the elements on the HTML page, read them and output in the console, once again with the help of while (PART2).
+// Finally, complete the functions in PART 3 and 4.
 
-var input2 = document.createElement("textarea");
-input2.value = 0;
-document.body.appendChild(input2);
+// ЗАДАЧА: вначале запиши в переменную array1 массив с числом элементов > 8.
+// Затем заполни функцию createAndAddInputElement() согласно инструкции внутри.
+// Далее, с помощью этой функции, в цикле while создай HTML-элемент на каждый элемент массива array1 (ЧАСТЬ 1).
+// Потом поменяй значение элементов в HTML-странице, считай их и выведи в консоль, опять же с помощью while (PART 2)
+// Наконец, заполни функции в ЧАСТЯХ 3 и 4.
 
-var BiTable = document.createElement("div");
-document.body.appendChild(BiTable);
+var createAndAddInputElement = function(value){
+	// TODO: this function must create an <input type="number" max="1" min="0" /> element and add it to the document body. value must be the argument of a function.
+	// ЗАДАЧА: эта функция должна создавать элемент <input type="number" max="1" min="0" value="..." /> и добавлять его в тело документа. значение должно быть аргументом функции.
+}
 
-var span00 = document.createElement("span");
-span00.innerHTML = "&emsp;&emsp;0";
-BiTable.appendChild(span00);
+// PART 1
+var buttonStatic = document.createElement("button");
+buttonStatic.innerHTML = "READ ARRAY FROM CODE!";
+document.body.appendChild(buttonStatic);
 
-var span01 = document.createElement("span");
-span01.style.color = "#0088ff";
-span01.innerHTML = "&emsp;&emsp;1";
-BiTable.appendChild(span01);
+var array1; // TODO: create an array with N > 8 elements in this variable
 
-BiTable.appendChild(document.createElement("div"));
-
-var span10 = document.createElement("span");
-span10.innerHTML = "0&emsp;";
-BiTable.appendChild(span10);
-
-var UL = document.createElement("input");
-UL.value = 1;
-UL.type = "number";
-UL.max=1;
-UL.min=0;
-UL.style.maxWidth="2em";
-BiTable.appendChild(UL);
-
-var UR = document.createElement("input");
-UR.value = 1;
-UR.type = "number";
-UR.max=1;
-UR.min=0;
-UR.style.maxWidth="2em";
-UR.style.backgroundColor="#0088ff";
-BiTable.appendChild(UR);
-
-BiTable.appendChild(document.createElement("div"));
-
-var span11 = document.createElement("span");
-span11.style.color = "#ff0000";
-span11.innerHTML = "1&emsp;";
-BiTable.appendChild(span11);
-
-var DL = document.createElement("input");
-DL.value = 1;
-DL.type = "number";
-DL.max=1;
-DL.min=0;
-DL.style.maxWidth="2em";
-DL.style.backgroundColor="#ff0000";
-BiTable.appendChild(DL);
-
-var DR = document.createElement("input");
-DR.value = 1;
-DR.type = "number";
-DR.max=1;
-DR.min=0;
-DR.style.maxWidth="2em";
-DR.style.backgroundColor="#aa00ff";
-BiTable.appendChild(DR);
-
-BiTable.appendChild(document.createElement("div"));
-
-var button = document.createElement("button");
-button.innerHTML = "OPERATIONS";
-BiTable.appendChild(button);
-
-var result = document.createElement("div");
-result.style.minHeight = "1em";
-result.style.borderStyle = "solid";
-result.style.borderWidth = "1px";
-document.body.appendChild(result);
-
-
-button.addEventListener("click", function() {
-		if ( (input1.value == "") || (input2.value == "") ) {
-			result.innerHTML = "one or both operands are empty";
-			return;
-		}
-		
-		var ar1 = Number(input1.value);
-		var ar2 = Number(input2.value);
-		if ( (ar1 == ar1) && (ar2 == ar2) ) { // NaN is never equal to itself. So, (ar1 == ar1) is the same as (ar1 != NaN)
-			var bt = [[UL.value, DL.value], [UR.value, DR.value]];
-			result.innerHTML = bt[ar1][ar2];
-		} else {
-			result.innerHTML = input1.value + input2.value;
-		}
+buttonStatic.addEventListener("click", function() {
+		// TODO: create <input ..> for each element of the array1 with the help of a createAndAddInputElement() function
+		// ЗАДАЧА: создай <input ..> для кажого элемента array1 с помощью функции createAndAddInputElement()
+		createAndAddInputElement(1);
 	}
 );
 
 
-// TODO:
-// ЗАДАЧА:
+// PART 2
+var buttonInput = document.createElement("button");
+buttonInput.innerHTML = "READ INPUTS INTO ARRAY";
+document.body.appendChild(buttonInput);
+
+buttonInput.addEventListener("click", function() {
+		// TODO: read input from each <input ...> element you have created, and print them with console.log() function
+		// ЗАДАЧА: прочитай входящие данные с каждого элемента <input ...>, который ты создал, и напечатай их с помощью функции console.log()
+		console.log("READ ELEMENTS:");
+	}
+);
+
+// PART 3
+var buttonRandom = document.createElement("button");
+buttonRandom.innerHTML = "RANDOMIZE";
+document.body.appendChild(buttonRandom);
+
+buttonInput.addEventListener("click", function() {
+		// TODO: create an array with random number of elements, where each element is also random. Print it in console.
+		// ЗАДЧА: создай массив со случайным количеством элементов, где каждый элемент тоже случайный. Напечатай его в кослои.
+		Math.random();
+		console.log("RANDOM ELEMENTS:");
+	}
+);
+
+// PART 4
+var buttonRandom = document.createElement("button");
+buttonRandom.innerHTML = "ARRAY OF ARRAYS";
+document.body.appendChild(buttonRandom);
+
+buttonInput.addEventListener("click", function() {
+		// TODO: create an array of arrays in a variable array2 and print it in console.
+		// ЗАДЧА: создай массив из массивов в переменной array2 и напечатай его в кослои.
+		var array2;
+		Math.random();
+		console.log("ARRAY OF ARRAYS:");
+
+	}
+);

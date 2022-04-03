@@ -73,6 +73,7 @@ button.addEventListener("click", function() {
 			result.innerHTML += loopExponentiation(ar1, ar2);
 			result.innerHTML += "<br/>"; // this element is a new line
 			result.innerHTML += loopAddition(ar1, ar2);
+			result.innerHTML += "<br><br>";
 		} else {
 			result.innerHTML = input1.value + input2.value;
 		}
