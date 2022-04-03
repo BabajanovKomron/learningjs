@@ -54,6 +54,7 @@ container_div.appendChild(canvas);
 
 var explanation = document.createElement("p");
 explanation.style.backgroundColor="#555555";
+explanation.style.fontWeight="bold";
 explanation.innerHTML += "<br><span style=\"border-top: 1px solid\">O</span><span style=\"color:yellow;border-top: 1px solid\">A</span> = <span style=\"border-top: 1px solid\">O</span><span style=\"color:red;border-top: 1px solid\">Y</span> + <span style=\"border-top: 1px solid\">O<span style=\"color:#00ff00;border-top: 1px solid\">X</span><br>";
 explanation.innerHTML += "<br><span style=\"color:red;border-top: 1px solid\">Y</span><span style=\"color:yellow;border-top: 1px solid\">A</span> = <span style=\"border-top: 1px solid\">O</span><span style=\"color:#00ff00;border-top: 1px solid\">X</span><br>";
 container_div.appendChild(explanation);
