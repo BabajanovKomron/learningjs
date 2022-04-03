@@ -1,5 +1,5 @@
 var fileSelector = document.createElement("textarea");
-	fileSelector.value = "graphics";
+	fileSelector.value = "vectors";
 document.body.appendChild(fileSelector);
 
 var button = document.createElement("button");
