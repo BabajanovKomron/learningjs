@@ -30,8 +30,6 @@ document.body.appendChild(buttonStatic);
 
 /*
 https://learningjs-komron.glitch.me/task_7_arrays.html
-
-
 */
 
 /*
@@ -71,22 +69,58 @@ var buttonRandom = document.createElement("button");
 buttonRandom.innerHTML = "RANDOMIZE";
 document.body.appendChild(buttonRandom);
 
-buttonInput.addEventListener("click", function () {
+buttonRandom.addEventListener("click", function () {
   // TODO: create an array with random number of elements, where each element is also random. Print it in console.
-  // ЗАДЧА: создай массив со случайным количеством элементов, где каждый элемент тоже случайный. Напечатай его в консоли.
-  Math.random();
-  console.log("RANDOM ELEMENTS:");
+  // ЗАДАЧА: создай массив со случайным количеством элементов, где каждый элемент тоже случайный. Напечатай его в консоли.
+  var array2 = [];
+  array2.length = Math.round(Math.random() * 100);
+  for(let i = 0; i < array2.length; i++){
+    array2[i] = Math.random(); 
+    console.log(array2[i]);
+  }
 });
 
 // PART 4
-var buttonRandom = document.createElement("button");
-buttonRandom.innerHTML = "ARRAY OF ARRAYS";
-document.body.appendChild(buttonRandom);
+var buttonInvert = document.createElement("button");
+buttonInvert.innerHTML = "INVERT";
+document.body.appendChild(buttonInvert);
 
-buttonInput.addEventListener("click", function () {
+buttonInvert.addEventListener("click", function () {
+  // TODO: invert the values of input elements. (0 -> 1 & 1 -> 0)
+  // ЗАДЧА: инверитруй (поменяй на противоположные) значения элементов input. (0 -> 1 & 1 -> 0)
+  var l = document.getElementsByTagName("input");
+  for(let i = 0; i < l.length; i++){
+      l[i].value = (Number(l[i].value) + 1) % 2; // Number("1") => 1    Number("a") => NaN
+      // l[i].value = (l[i].value == 0) ? 1 : 0; // TERNARY OPERATOR
+}
+  console.log("INVERTED!");
+});
+
+// PART 5
+var buttonA2 = document.createElement("button");
+buttonA2.innerHTML = "ARRAY OF ARRAYS";
+document.body.appendChild(buttonA2);
+
+buttonA2.addEventListener("click", function () {
   // TODO: create an array of arrays in a variable array2 and print it in console.
-  // ЗАДЧА: создай массив из массивов в переменной array2 и напечатай его в кослои.
-  var array2;
-  Math.random();
+  // ЗАДАЧА: создай массив из массивов в переменной array2 и напечатай его в консоли.
+  /*
+  2-dimensional array
+  
+          0     1     2
+ 0    [  [1]   [3]   [6]  ]
+ 1    [  [2]   [4]   [7]  ]
+ 2    [        [5]   [8]  ]
+ 3    [              [9]  ]
+ 
+ array2[2][3]
+  */
+  var array2 = [ [1,2], [3,4,5], [6,7,8,9] ];
   console.log("ARRAY OF ARRAYS:");
+  for(let i = 0; i < array2.length; i++){
+    for(let j = 0; j < array2[i].length; j++){
+      console.log(array2[i][j]);
+    }
+    console.log("\n");
+  }
 });
