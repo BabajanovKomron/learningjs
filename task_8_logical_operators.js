@@ -81,21 +81,36 @@ result.style.borderStyle = "solid";
 result.style.borderWidth = "1px";
 document.body.appendChild(result);
 
+/* 
+a ↑↑ X = ...
+a ↑ X = ((a^a)^a)^a ... X times     // UNIVERSITY
+a ^ X = a * a * a * a ... X times   // 6-9
+a * X = a + a + a + ... X times
+a + X = ((a++) ++) ++ ... X times  // SCHOOL LEVEL
+a++ = ?  // HINT: it consists from logical operators
+What is logical operators? = we will implement them with arrays
+Phyiscal level !!! = example of how you can build your own circuit (контур, или микросхема)
 
+*/
 
 var logicalNOT = function(a) {
 	// TODO: implement "logical NOT" operator with the help of arrays
 	// ЗАДАЧА: реализовать оператор "логичское НЕ" с помощью массива
-	return !a;
+  var array = [1, 0];
+  return array[a];
+	
+  //return !a; // 0 -> 1 , 1 -> 0
 }
 var logicalAND = function(a, b) {
 	// TODO: implement "logical AND" operator with the help of arrays
 	// ЗАДАЧА: реализовать оператор "логичское И" с помощью массивов
+  
 	return a & b;
 }
 var logicalOR = function (a, b){
 	// TODO: implement "logical OR" operator with the help of arrays
 	// ЗАДАЧА: реализовать оператор "логичское ИЛИ" с помощью массивов
+  
 	return a | b;
 }
 var logicalXOR = function (a, b){
@@ -125,7 +140,7 @@ button.addEventListener("click", function() {
 			result.innerHTML += "a | b == " + logicalOR(ar1, ar2);
 			result.innerHTML += "<br>";
 			result.innerHTML += "a ^ b == " + logicalXOR(ar1, ar2);
-			result.innerHTML += "<br><br>";
+			result.innerHTML += "<br><hr>";
 		} else {
 			result.innerHTML = input1.value + input2.value;
 		}

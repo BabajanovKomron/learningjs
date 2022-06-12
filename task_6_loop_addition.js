@@ -53,8 +53,8 @@ var loopAddition = function(a, b){
 	while(b > 0){
        	a++;
        	b--;
-  	}
-   	return a;
+  }
+  return a;
 }
 
 
