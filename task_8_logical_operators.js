@@ -81,43 +81,55 @@ result.style.borderStyle = "solid";
 result.style.borderWidth = "1px";
 document.body.appendChild(result);
 
-/* 
-a ↑↑ X = ...
-a ↑ X = ((a^a)^a)^a ... X times     // UNIVERSITY
-a ^ X = a * a * a * a ... X times   // 6-9
-a * X = a + a + a + ... X times
-a + X = ((a++) ++) ++ ... X times  // SCHOOL LEVEL
-a++ = ?  // HINT: it consists from logical operators
-What is logical operators? = we will implement them with arrays
-Phyiscal level !!! = example of how you can build your own circuit (контур, или микросхема)
-
-*/
-
 var logicalNOT = function(a) {
 	// TODO: implement "logical NOT" operator with the help of arrays
 	// ЗАДАЧА: реализовать оператор "логичское НЕ" с помощью массива
   var array = [1, 0];
   return array[a];
 	
-  //return !a; // 0 -> 1 , 1 -> 0
+  // return !a; // 0 -> 1 , 1 -> 0
 }
 var logicalAND = function(a, b) {
 	// TODO: implement "logical AND" operator with the help of arrays
 	// ЗАДАЧА: реализовать оператор "логичское И" с помощью массивов
   
-	return a & b;
+  // 1 & 1 = 1  // (array[1] = [0, 1]  ) [1] = 1
+  // 0 & 0 = 0  // (array[0 = [0, 0]] ) [0] = 0
+  // 1 & 0 = 0  // (array[1] = [0, 1] ) [0] = 0
+  // 0 & 1 = 0  // (array[0] = [0, 0] ) [1] = 0
+  var array = [ [0, 0],
+                [0, 1] ];
+  return array[a][b]; 
+  
+  // return a & b; // 1 & 1 -> 1  ,  0 & 0 -> 0  ,  1 & 0 -> 0   ,   0 & 1 -> 0
 }
 var logicalOR = function (a, b){
 	// TODO: implement "logical OR" operator with the help of arrays
 	// ЗАДАЧА: реализовать оператор "логичское ИЛИ" с помощью массивов
-  
-	return a | b;
+  var array = [ [0, 1], 
+                [1, 1] ];
+  return array[a][b];
+	// return a | b; // 1 & 1 -> 1 , 1 & 0 -> 1 , 0 & 0 -> 0, 0 & 1 -> 1 . 
 }
 var logicalXOR = function (a, b){
 	// TODO: implement "logical XOR" operator with the help of arrays
 	// ЗАДАЧА: реализовать оператор "логичское исключительное ИЛИ" с помощью массивов
-	return a ^ b;
+  var array = [ [0, 1], 
+                [1, 0] ];
+  return array[a][b];
+	// return a ^ b;
 }
+
+// OPTIONAL TODO: NAND, NOR, XNOR gates
+
+var TERNARY_OPERATOR = function (question, ifTrue, ifFalse) {
+  // TODO: implement ternary operator with the help of arrays
+  // ЗАДАЧА: реализовать тернарный оператор с помощью массивов
+  var array = [ifFalse, ifTrue];
+  return array[question];
+  //return question ? ifTrue : ifFalse;
+}
+
 
 button.addEventListener("click", function() {
 		if ( (input1.value == "") || (input2.value == "") ) {
@@ -128,7 +140,8 @@ button.addEventListener("click", function() {
 		var ar1 = Number(input1.value);
 		var ar2 = Number(input2.value);
 		if ( (ar1 == ar1) && (ar2 == ar2) ) { // NaN is never equal to itself. So, (ar1 == ar1) is the same as (ar1 != NaN)
-			var bt = [[UL.value, DL.value], [UR.value, DR.value]];
+			var bt = [[UL.value, DL.value],
+                [UR.value, DR.value]];
 			result.innerHTML += bt[ar1][ar2];
 			result.innerHTML += "<br><br>";
 			result.innerHTML += "!a == " + logicalNOT(ar1);
@@ -136,17 +149,15 @@ button.addEventListener("click", function() {
 			result.innerHTML += "!b == " + logicalNOT(ar2);
 			result.innerHTML += "<br>";
 			result.innerHTML += "a & b == " + logicalAND(ar1, ar2);
-			result.innerHTML += "<br>";
+			result.innerHTML += "<br>";  
 			result.innerHTML += "a | b == " + logicalOR(ar1, ar2);
 			result.innerHTML += "<br>";
 			result.innerHTML += "a ^ b == " + logicalXOR(ar1, ar2);
+      result.innerHTML += "<br>";
+      result.innerHTML += TERNARY_OPERATOR(Number(ar1 == ar2), "A", "B");
 			result.innerHTML += "<br><hr>";
 		} else {
 			result.innerHTML = input1.value + input2.value;
 		}
 	}
 );
-
-
-// TODO:
-// ЗАДАЧА:

@@ -113,7 +113,7 @@ buttonA2.addEventListener("click", function () {
  2    [        [5]   [8]  ]
  3    [              [9]  ]
  
- array2[2][3]
+ (array2[2]) [3]
   */
   var array2 = [ [1,2], [3,4,5], [6,7,8,9] ];
   console.log("ARRAY OF ARRAYS:");
